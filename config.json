@@ -1,0 +1,14 @@
+{
+  "prod" : {
+    "root" : "build/prod",
+    "js" : "build/prod/js",
+    "css" : "build/prod/css",
+    "images" : "build/prod/images"
+  },
+  "dev" : {
+    "root" : "build/dev",
+    "js" : "build/dev/js",
+    "css" : "build/dev/css",
+    "images" : "build/dev/images"
+  }
+}
