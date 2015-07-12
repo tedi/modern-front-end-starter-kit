@@ -5,8 +5,8 @@
  
 // Load plugins
 var gulp = require('gulp'),
-	inject = require('gulp-inject'),
-	fileinclude = require('gulp-file-include'),
+  inject = require('gulp-inject'),
+  fileinclude = require('gulp-file-include'),
     compass = require('gulp-compass'),
     // sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -64,7 +64,7 @@ gulp.task('dev-styles', function() {
       image: config.dev.images,
       require: ['susy', 'modular-scale']
     }))
-    .pipe(gulp.dest('public/assets/styles'))
+    .pipe(gulp.dest(config.dev.css))
     .pipe(notify({ message: 'Dev styles task complete' }));
 });
 
