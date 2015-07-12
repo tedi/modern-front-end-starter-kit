@@ -22,6 +22,7 @@ var gulp = require('gulp'),
     del = require('del'),
     source = require('vinyl-source-stream'),
     browserify = require('browserify'),
+    babelify = require("babelify"),
     config = require('./config.json');
 
 
@@ -84,7 +85,8 @@ gulp.task('prod-styles', function() {
 
 // Scripts
 gulp.task('browserify', function() {
-  return browserify('app/javascript/app/main.js')
+  return browserify('app/javascript/app/main.js', { debug: true })
+    .transform(babelify)
     .bundle()
     //Pass desired output filename to vinyl-source-stream
     .pipe(source('main.js'))
